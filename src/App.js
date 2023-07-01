@@ -6,14 +6,26 @@ import user from './components/Profile/user.json';
 import Statistics from './components/Statistics/Statistics';
 import data from './components/Statistics/data.json';
 
+import FriendList from 'components/FriendList/FriendList';
+import friends from './components/FriendList/friends.json';
+
+import TransactionHistory from 'components/TransactionHistory/TransactionHistory';
+import transactions from 'components/TransactionHistory/transactions.json';
+
 function App() {
   return (
     <>
       <Global
         styles={css`
+          *,
+          *:before,
+          *:after {
+            box-sizing: border-box;
+          }
+
           body {
             background-color: #f6f6f6;
-            padding: 10px 0;
+            padding: 30px 0;
           }
 
           h1,
@@ -29,7 +41,9 @@ function App() {
         `}
       />
       <Profile {...user} />;
-      <Statistics title={'Upload stats'} stats={data} />
+      <Statistics title="Upload stats" stats={data} />
+      <FriendList friends={friends} />
+      <TransactionHistory items={transactions} />
     </>
   );
 }

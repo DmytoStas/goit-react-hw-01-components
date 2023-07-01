@@ -11,6 +11,7 @@ const StatisticsContainer = styled.div`
   box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   background-color: #fff;
+  overflow: hidden;
 `;
 
 const Title = styled.h2`
@@ -30,8 +31,8 @@ const StatsList = styled.ul`
 `;
 
 const StatsItem = styled.li`
-  width: 100%;
   display: flex;
+  width: 100%;
   align-items: center;
   justify-content: center;
   flex-direction: column;

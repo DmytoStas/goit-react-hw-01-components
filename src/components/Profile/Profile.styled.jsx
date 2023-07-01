@@ -5,11 +5,12 @@ const ProfileContainer = styled.div`
   max-width: 300px;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 30px;
 
   box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   background-color: #fff;
-  padding-top: 30px;
+  overflow: hidden;
 `;
 
 const Avatar = styled.img`
@@ -57,7 +58,7 @@ const StatsItem = styled.li`
   flex-direction: column;
   border-right: 1px solid #d0d0d0;
 
-  :last-child {
+  :last-of-type {
     border-right: none;
   }
 `;
