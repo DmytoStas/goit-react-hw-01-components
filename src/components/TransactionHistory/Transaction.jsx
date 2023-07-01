@@ -1,4 +1,6 @@
-import { BodyRow, BodyTableCell } from './TransactionHistory.styled';
+import PropTypes from 'prop-types';
+
+import { BodyRow, BodyTableCell } from './Transaction.styled';
 
 export default function Transaction({ type, amount, currency }) {
   return (
@@ -9,3 +11,9 @@ export default function Transaction({ type, amount, currency }) {
     </BodyRow>
   );
 }
+
+Transaction.propTypes = {
+  type: PropTypes.string.isRequired,
+  amount: PropTypes.string.isRequired,
+  currency: PropTypes.string.isRequired,
+};
